@@ -1,0 +1,1 @@
+In this code, you will learn how to use Object Orientated PHP by creating a form, that collects information from a user, which is then stores it in a database as well as reads that information from a database
