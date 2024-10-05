@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 
 
 // Database connection (update credentials accordingly)
-$pdo = new PDO('mysql:host=127.0.0.1:3307;dbname=user_data', 'root', '');
+$pdo = new PDO('mysql:host=127.0.0.1:3306;dbname=user_data', 'root', '');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
@@ -31,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'glynn.tanui@strathmore.edu';  // Your email address
-        $mail->Password = 'mplj uvur zzfw phpv';  // Your email password
+        $mail->Username = 'edgar.ndonga@strathmore.edu';  // Your email address
+        $mail->Password = 'vked doyx qiug tzsl';  // Your email password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->SMTPOptions = array(
             'ssl' => array(
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('glynn.tanui@strathmore.edu', 'Your App');
+        $mail->setFrom('edgar.ndonga@strathmore.edu', 'Your App');
         $mail->addAddress($email, $username);
         // Generate a unique confirmation code
         $code = random_int(100000, 999999);

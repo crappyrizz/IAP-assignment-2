@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO('mysql:host=127.0.0.1:3307;dbname=user_data', 'root', '');
+$pdo = new PDO('mysql:host=127.0.0.1:3306;dbname=user_data', 'root', '');
 
 // Load Composer's autoloader
 require 'vendor/autoload.php'; 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'glynn.tanui@strathmore.edu';  
+            $mail->Username = 'edgar.ndonga@strathmore.edu';  
             $mail->Password = 'mplj uvur zzfw phpv';  
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->SMTPOptions = array(
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->Port = 587;
 
             // Recipients
-            $mail->setFrom('glynn.tanui@strathmore.edu', 'Confirmation Code');
+            $mail->setFrom('edgar.ndonga@strathmore.edu', 'Confirmation Code');
             $mail->addAddress($email);
 
             // Email content
